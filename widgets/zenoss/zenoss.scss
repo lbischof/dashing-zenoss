@@ -1,0 +1,54 @@
+$background-warning-color-1: #e82711;
+$background-warning-color-2: #9b2d23;
+
+$background-danger-color-1: #eeae32;
+$background-danger-color-2: #ff9618;
+
+@-webkit-keyframes status-warning-background {
+  0%   { background-color: $background-warning-color-1; }
+  50%  { background-color: $background-warning-color-2; }
+  100% { background-color: $background-warning-color-1; }
+}
+@-webkit-keyframes status-danger-background {
+  0%   { background-color: $background-danger-color-1; }
+  50%  { background-color: $background-danger-color-2; }
+  100% { background-color: $background-danger-color-1; }
+}
+@mixin animation($animation-name, $duration, $function, $animation-iteration-count:""){
+  -webkit-animation:  $animation-name $duration $function #{$animation-iteration-count};
+  -moz-animation:     $animation-name $duration $function #{$animation-iteration-count};
+  -ms-animation:      $animation-name $duration $function #{$animation-iteration-count};
+}
+
+.widget-zenoss {
+  padding: 0 !important;
+  vertical-align: top !important;
+
+  ol {
+    list-style: none;
+  } 
+  span {
+    font-size: 35px;
+    width: 67%;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px;
+  }
+  .resource {
+    width: 30%;
+    white-space: nowrap;
+  }
+  .severity5 {
+    background-color: $background-warning-color-1;
+    @include animation(status-warning-background, 2s, ease, infinite);
+  }
+  .severity4 {
+    color: #000;
+    background-color: $background-danger-color-1;
+    @include animation(status-danger-background, 2s, ease, infinite);
+  }
+ 
+}

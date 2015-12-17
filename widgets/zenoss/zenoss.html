@@ -1,0 +1,12 @@
+<div data-bind="value"></div>
+
+
+<ol>
+  <li data-foreach-event="events">
+    <div data-bind-class="event.severity">
+      <span class="resource" data-bind="event.resource"></span>
+      <span class="summary" data-bind="event.summary" data-bind-class="event.severity"></span>
+    </div>
+  </li>
+</ol>
+
