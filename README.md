@@ -13,7 +13,7 @@ zenity: Shows dialog if Zenoss is not reachable
 # Usage
 To use this widget, copy `zenoss.html`, `zenoss.coffee`, and `zenoss.scss` into a `/widgets/zenoss` directory, and copy the `zenoss.rb` file into your `/jobs` folder. Also copy the notifaction.wav file into the `assets` folder.
 
-Edit the Zenoss URL in the job. Create monitoring.pw file above dashing root with the Zenoss password.
+Edit the Zenoss URL in the job and the basic authentication part to suit your needs.
 
 To include the widget in a dashboard, add the following snippet to the dashboard layout file:
 ```html
