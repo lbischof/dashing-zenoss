@@ -1,6 +1,9 @@
 # Preview
 ![](https://raw.githubusercontent.com/lbischof/dashing-zenoss/master/preview.png)
 
+https://gitlab.com/lbischof/dashing-zenoss
+![Moved to GitLab](https://i.imgur.com/wGgvnPq.png)
+
 # Description
 Widget for [Dashing](http://dashing.io/) that shows [Zenoss](http://www.zenoss.com/) events.
 
